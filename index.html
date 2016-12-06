@@ -60,15 +60,15 @@
 
         <div class="main-wrapper">
             <div style="margin-left:30%;margin-top:10%;">
-            <h2>请输入长网址：</h2>
+            <h2>请输入ip地址：</h2>
             <div class="ant-search-input-wrapper" style="margin-top:17px;">
                 <span class="ant-input-group ant-search-input ant-search-input-focus" style="width:776px;">
                     <span class="ant-input-wrapper">
-                        <input type="text" placeholder="" value="" class="ant-input" style="height:63px;" id='long_url' >
+                        <input type="text" placeholder="" value="" class="ant-input" style="height:63px;" id='ip_addr' >
                     </span>
                     <div class="ant-input-group-wrap" >
                         <button type="button" class="ant-btn ant-btn-icon-only ant-search-btn" style="height:61px;">
-                            <i type="search" id="compress_url">压缩一下</i>
+                            <i type="search" id="compress_url">查询</i>
                         </button>
                     </div>
                 </span>
@@ -121,37 +121,36 @@
                 "<div style='float:right;display: inline-flex;'><div style='margin-right:9px;margin-top:4px;'>{statistics}</div><img src='https://mrlawes.github.io/-Cuteurl/static/images/statistics.png' /></div>" +
             "</div>" +
         "</section>";
-        return_html = return_html.replace("{long_url}", data["long_url"]);
-        return_html = return_html.replace("{short_url}", data["short_url"]);
-        return_html = return_html.replace("{short_url}", data["short_url"]);
-        return_html = return_html.replace("{statistics}", data["statistics"]);
+        return_html = return_html.replace("{long_url}", data);
+        return_html = return_html.replace("{short_url}", data);
+        return_html = return_html.replace("{short_url}", data);
+        return_html = return_html.replace("{statistics}", data);
         return return_html
     }
 
     function shorturls_innerhtml(get_shorturl_json){
         var short_urls = document.getElementById("short_urls")
-        short_urls.innerHTML = create_shorturls_section(window.get_shorturl_json);
+        short_urls.innerHTML = create_shorturls_section(window.formatted_address);
     }
 
     $("#compress_url").click(function () {
-        var long_url = $("#long_url").value;
+        var ip_addr = $("#ip_addr").value;
         $.ajax({
-//            TODO
-            url: 'https://mrlawes.github.io/-Cuteurl/api/data/get_short_url.html',
+            url: 'http://api.map.baidu.com/highacciploc/v1?qcip='+ ip_addr +'&qterm=pc&ak=omhNrOPQOYt5iVzNSlZ8MuE6tQC7KxL2&coord=bd09ll&extensions=3',
             type: "GET",
-            data: {
-                long_url: long_url
-            },
+//            data: {
+//                long_url: long_url
+//            },
             dataType: "json",
             success: function (data) {
-                var msg = data["msg"];
-                if (data["code"] != "10000") {
-                    alert(msg)
-                } else if (data["code"] == "10000") {
-                    window.get_shorturl_json = data["data"];
-                    $("#short_urls").slideToggle("slow", shorturls_innerhtml);
-                    $("#short_urls").slideToggle("slow");
-                }
+//                var msg = data["msg"];
+//                if (data["code"] != "10000") {
+//                    alert(msg)
+//                } else if (data["code"] == "10000") {
+                window.formatted_address = data["content"]["formatted_address"];
+                $("#short_urls").slideToggle("slow", shorturls_innerhtml);
+                $("#short_urls").slideToggle("slow");
+//                }
             },
             error: function () {
                 alert("网络异常")
