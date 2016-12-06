@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class=" ">
+<head>
+    <!--TODO-->
+    <script type="text/javascript" src="https://mrlawes.github.io/-Cuteurl/static/js/jquery-1.8.3.min.js"></script>
+
+    <script src="https://mrlawes.github.io/-Cuteurl/static/js/react.js"></script>
+    <script src="https://mrlawes.github.io/-Cuteurl/static/js/react-dom.js"></script>
+    <script src="https://mrlawes.github.io/-Cuteurl/static/js/browser.min.js"></script>
+    <script src="https://mrlawes.github.io/-Cuteurl/static/js/remarkable.min.js"></script>
+    <script src="https://mrlawes.github.io/-Cuteurl/static/js/antd.js"></script>
+    <link href="https://mrlawes.github.io/-Cuteurl/static/css/antd.css" rel="stylesheet">
+    <script src="https://mrlawes.github.io/-Cuteurl/static/js/antd.min.js"></script>
+    <link href="https://mrlawes.github.io/-Cuteurl/static/css/antd.min.css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO 我的短链</title>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <style>
+        #lang, #nav {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="react-content">
+    <div data-reactroot="" class="page-wrapper">
+        <header id="header" class="clearfix">
+            <div class="ant-row">
+                <div class="ant-col-xs-24 ant-col-sm-7 ant-col-md-6 ant-col-lg-4">
+                    <i class="nav-phone-icon anticon anticon-menu"></i>
+                    <a id="logo" href="javascript:;"><span>TODO 给网站取个名</span></a>
+                </div>
+                <div class="nav  ant-col-xs-0 ant-col-sm-17 ant-col-md-18 ant-col-lg-20" style="display: block;">
+                    <ul class="ant-menu ant-menu-horizontal  ant-menu-light ant-menu-root" role="menu"
+                        aria-activedescendant="" id="nav" tabindex="0">
+                        <li class="ant-menu-item" role="menuitem" aria-selected="false">
+                            <a href="javascript:;"><span>TOUR</span></a>
+                        </li>
+                        <li class="ant-menu-item" role="menuitem" aria-selected="false">
+                            <a href="javascript:;"><span>ENTERPRISE</span></a>
+                        </li>
+                        <li class="ant-menu-item" role="menuitem" aria-selected="false">
+                            <a href="javascript:;"><span>RESOURCES</span></a>
+                        </li>
+                        <li class="ant-menu-item" role="menuitem" aria-selected="false">
+                            <a href="javascript:;"><span>BLOG</span></a>
+                        </li>
+                        <li class="ant-menu-item" role="menuitem" aria-selected="false">
+                            <a href="javascript:;"><span>ABOUT</span></a>
+                        </li>
+                    </ul>
+                    <button id="login" style="margin-top:24px;margin-left:35%;width: 85px;" type="button" class="ant-btn ant-btn-primary ant-btn-lg" >登录</button>
+                    <button id="signup" style="margin-top:24px;margin-left:35px;width: 80px;" type="button" class="ant-btn ant-btn-primary ant-btn-lg" >注册</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <div style="margin-left:30%;margin-top:10%;">
+            <h2>请输入长网址：</h2>
+            <div class="ant-search-input-wrapper" style="margin-top:17px;">
+                <span class="ant-input-group ant-search-input ant-search-input-focus" style="width:776px;">
+                    <span class="ant-input-wrapper">
+                        <input type="text" placeholder="" value="" class="ant-input" style="height:63px;" id='long_url' >
+                    </span>
+                    <div class="ant-input-group-wrap" >
+                        <button type="button" class="ant-btn ant-btn-icon-only ant-search-btn" style="height:61px;">
+                            <i type="search" id="compress_url">压缩一下</i>
+                        </button>
+                    </div>
+                </span>
+            </div>
+
+            <section class="code-box" id="short_urls" style="margin-top:30px;width:776px;">
+                <section class="code-box-demo">
+                    <div style="margin-bottom: 16px;">www.baidu.com</div>
+                    <div style="margin-bottom: 16px;margin-top: 30px;">
+                        <div style="float:left;"><a href="http://bit.ly/1EWeEOy">http://bit.ly/1EWeEOy</a></div>
+                        <div style="float:left;"><button style="margin-left:35%;width: 56px;height:22px;padding-top: 0px;" type="button" class="ant-btn ant-btn-primary ant-btn-lg" ><font size="-9">复制</font></button></div>
+                        <div style="float:right;display: inline-flex;"><div style="margin-right:9px;margin-top:4px;">111</div><img src="https://mrlawes.github.io/-Cuteurl/static/images/statistics.png" /></div>
+                    </div>
+                </section>
+                <section class="code-box-demo">
+                    <div style="margin-bottom: 16px;">www.google.com</div>
+                    <div style="margin-bottom: 16px;margin-top: 30px;">
+                        <div style="float:left;"><a href="http://bit.ly/1EWeEOy">http://bit.ly/2Yxwx27</a></div>
+                        <div style="float:left;"><button style="margin-left:35%;width: 56px;height:22px;padding-top: 0px;" type="button" class="ant-btn ant-btn-primary ant-btn-lg" ><font size="-9">复制</font></button></div>
+                        <div style="float:right;display: inline-flex;"><div style="margin-right:9px;margin-top:4px;">111</div><img src="https://mrlawes.github.io/-Cuteurl/static/images/statistics.png" /></div>
+                    </div>
+                </section>
+            </section>
+
+            <br/>
+            <br/>
+            <br/><br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </div>
+
+        </div>
+
+        <footer id="footer"></footer>
+    </div>
+</div>
+<div>
+    <object id="ClCache" click="sendMsg" host="" width="0" height="0"></object>
+</div>
+
+<script>
+    function create_shorturls_section(data){
+        return_html = "<section class='code-box-demo'>" +
+            "<div style='margin-bottom: 16px;'>{long_url}</div>" +
+            "<div style='margin-bottom: 16px;margin-top: 30px;'>" +
+                "<div style='float:left;'><a href='{short_url}'>{short_url}</a></div>" +
+                "<div style='float:left;'><button style='margin-left:35%;width: 56px;height:22px;padding-top: 0px;' type='button' class='ant-btn ant-btn-primary ant-btn-lg' ><font size='-9'>复制</font></button></div>" +
+                "<div style='float:right;display: inline-flex;'><div style='margin-right:9px;margin-top:4px;'>{statistics}</div><img src='https://mrlawes.github.io/-Cuteurl/static/images/statistics.png' /></div>" +
+            "</div>" +
+        "</section>";
+        return_html = return_html.replace("{long_url}", data["long_url"]);
+        return_html = return_html.replace("{short_url}", data["short_url"]);
+        return_html = return_html.replace("{short_url}", data["short_url"]);
+        return_html = return_html.replace("{statistics}", data["statistics"]);
+        return return_html
+    }
+
+    function shorturls_innerhtml(get_shorturl_json){
+        var short_urls = document.getElementById("short_urls")
+        short_urls.innerHTML = create_shorturls_section(window.get_shorturl_json);
+    }
+
+    $("#compress_url").click(function () {
+        var long_url = $("#long_url").value;
+        $.ajax({
+//            TODO
+            url: 'https://mrlawes.github.io/-Cuteurl/api/data/get_short_url.html',
+            type: "GET",
+            data: {
+                long_url: long_url
+            },
+            dataType: "json",
+            success: function (data) {
+                var msg = data["msg"];
+                if (data["code"] != "10000") {
+                    alert(msg)
+                } else if (data["code"] == "10000") {
+                    window.get_shorturl_json = data["data"];
+                    $("#short_urls").slideToggle("slow", shorturls_innerhtml);
+                    $("#short_urls").slideToggle("slow");
+                }
+            },
+            error: function () {
+                alert("网络异常")
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

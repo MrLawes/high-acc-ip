@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+	<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+	<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+	<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+	<script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+	<script src="https://unpkg.com/remarkable@1.6.2/dist/remarkable.min.js"></script>	
+	<script src="https://unpkg.com/antd/dist/antd.js"></script>	
+	<link href="https://unpkg.com/antd/dist/antd.css" rel="stylesheet">
+	<script src="https://unpkg.com/antd/dist/antd.min.js"></script>	
+	<link href="https://unpkg.com/antd/dist/antd.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="example" >11</div>
+    <script type="text/babel">
+		const { message, Button } = antd;
+        ReactDOM.render(<Button type="primary" >Display normal message</Button> , document.getElementById('example'));
+        console.warn(message);
+        $("#example").click(function () {
+            message.info("testttttttttt");
+        });
+    </script>
+  </body>
+</html>
